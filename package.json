@@ -4,19 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build" : "browserify app/index.js -o web/js/index-bundle.js",
+    "start" : "node server.js -p 5150"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rook2pawn/eb-calc-demo.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "David Wee <rook2pawn@gmail.com>",
   "bugs": {
     "url": "https://github.com/rook2pawn/eb-calc-demo/issues"
   },
   "homepage": "https://github.com/rook2pawn/eb-calc-demo#readme",
   "dependencies": {
+    "browserify": "^14.4.0",
     "ecstatic": "^2.2.1",
     "optimist": "^0.6.1",
     "router-middleware": "^2.2.1"

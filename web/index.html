@@ -1,42 +1,18 @@
-<style>
-.mktg-landing-hero {
-    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.png");
-    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.svg),
-    linear-gradient(transparent, transparent);
-}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdn.evbstatic.com/s3-build/10056-rc2017-06-14_16.04-7be9035/django/css/production/base_styles.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.evbstatic.com/s3-build/10056-rc2017-06-14_16.04-7be9035/django/css/src/smacss/non_modular/global_header.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.evbstatic.com/s3-build/10056-rc2017-06-14_16.04-7be9035/django/css/src/eventbrite_design_system/eds.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.evbstatic.com/s3-build/10056-rc2017-06-14_16.04-7be9035/django/css/production/landing_page.css" />
+<link rel="stylesheet" type="text/css" href="https://cdn.evbstatic.com/s3-build/10056-rc2017-06-14_16.04-7be9035/django/css/src/eventbrite_design_system/eds.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
 
-.mktg-form-bg {
-	background-color: #fff;
-	margin-top: -100px;
-}
+<script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
+<script type='text/javascript' src='js/index-bundle.js'></script>
+</head>
 
-.mktg-grey-border {
-	width: 40px;
-	border-top: 1px solid #D2D6DF;
-}
+<body>
 
-.mktg-btn-overlap {
-    position: inherit;
-    z-index: 300;
-    margin-top: -22px;
-}
-
-.mktg-btn-shadow {
-    -webkit-box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
-    -moz-box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
-    box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
-}
-
-/* Size: small-middle-width */
-@media screen and (max-width: 480px) {
-	.mktg-landing-hero {
-    	background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.png");
-    	background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.svg),
-    linear-gradient(transparent, transparent);
-	}
-}
-
-</style>
 
 <!-- Marketing Nav Bar -->
 <div class="mktg-gh">
@@ -68,7 +44,7 @@
 </section>
 
 <!-- Marketing Form -->
-<section class="eds-bg-color--grey-100">
+<section id='section1' class="sectionPanel eds-bg-color--grey-100">
 <!-- Sign up Form -->
     <div class="mktg-grid-container mktg-l-pad-bot-40 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
         <div class="eds-g-cell eds-g-cell-12-12 eds-g-cell-sw-10-12 eds-g-offset-sw-1-12 mktg-form-bg">
@@ -89,3 +65,334 @@
     </div>
 <!-- END: Sign up Form -->
 </section>
+
+
+<section id='section2' class="sectionPanel eds-bg-color--grey-100">
+    <div class="mktg-grid-container eds-align--center mktg-l-pad-bot-80">
+        <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
+            <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
+            	<div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4 eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                    <div class="eds-l-mar-bot-3">
+	                   <h2 class="eds-text-hm eds-text-color--grey-900">Let's start with the basics</h2>
+                    </div>
+	                <div class="mktg-grey-border"></div>
+                </div>
+                <div class="mktg-l-pad-top-60 eds-g-group">
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">What type of events do you organize?</p>
+                        </div>
+                        <select class="js-d-select-box">
+                            <option value="0">Select one</option>
+                            <option value="1">Classes</option>
+                            <option value="2">Conferences</option>
+                            <option value="3">Festivals & Consumer Events</option>
+                            <option value="4">Music Festivals & Concerts</option>
+                            <option value="5">Non-profit Events</option>
+                            <option value="6">Races and Participatory Sports</option>
+                            <option value="7">University/Education</option>
+                        </select>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">What do you typically charge for tickets/registration? </p>
+                        </div>
+                        <select class="js-d-select-box">
+                            <option value="0">Select one</option>
+                            <option value="1">Free</option>
+                            <option value="2">$1–$10</option>
+                            <option value="3">$11–$25</option>
+                            <option value="4">$26–$50</option>
+                            <option value="5">$51–$75</option>
+                            <option value="6">$76–$100</option>
+                            <option value="7">$101–$125</option>
+                            <option value="8">$150+</option>
+                        </select>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">How many paid events did you host in the last year?</p>
+                        </div>
+                        <select class="js-d-select-box">
+                            <option value="0">Select one</option>
+                            <option value="1">1</option>
+                            <option value="2">2–3</option>
+                            <option value="3">4–5</option>
+                            <option value="4">6–7</option>
+                            <option value="5">8–10</option>
+                            <option value="6">11–20</option>
+                            <option value="7">21–25</option>
+                            <option value="8">26+</option>
+                            <option value="9">0</option>
+                        </select>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">What’s the average attendance for your events?</p>
+                        </div>
+                        <select class="js-d-select-box">
+                            <option value="0">Select one</option>
+                            <option value="2">1–100</option>
+                            <option value="3">101–250</option>
+                            <option value="4">251–500</option>
+                            <option value="5">501–1000</option>
+                            <option value="6">1001–2000</option>
+                            <option value="7">2001–3000</option>
+                            <option value="8">5001+</option>
+                        </select>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">How many people visit your event website each year?</p>
+                        </div>
+                        <form class="responsive-form">
+                            <input type="text" placeholder="" value="" class="[modifier class]" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+<!-- deapsea blue section -->
+            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-1.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-1.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
+            <div class="eds-bg-color--deepsea-blue-500">
+            <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
+                <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Now let’s talk about your purchase process.</p>
+            </div>
+        </div>
+<!-- Bottom Button -->
+        <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-btn-overlap">
+            <div class="eds-g-cell-4-12 eds-g-offset-4-12 eds-g-cell-md-2-12 eds-g-offset-md-5-12 eds-l-mar-bot-6">
+                 <a href="https://www.evbqa.com/l/roi-3" class="mktg-btn eds-align--center mktg-btn-shadow">Next</a>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- END: Sign up Form -->
+</section>
+
+<!-- Marketing Form -->
+<section id='section3' class="sectionPanel eds-bg-color--grey-100">
+    <div class="mktg-grid-container eds-align--center mktg-l-pad-bot-80">
+        <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
+            <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
+                <div class="mktg-l-pad-top-60 eds-g-group">
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-hm mktg-text-light eds-text-color--sunrise-orange-500">X%</p>
+                        </div>
+                        <p class="eds-text-bl eds-text-color--grey-800">of your website visitors buy tickets or register from your event</p>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-hm mktg-text-light eds-text-color--sunrise-orange-500">X%</p>
+                        </div>
+                        <p class="eds-text-bl eds-text-color--grey-800">of potential attendees never complete your purchase flow</p>
+                    </div>
+                </div>
+            </div>
+<!-- Orange section section -->
+            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-2.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-2.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Tickets">
+                <div class="eds-bg-color--sunrise-orange-500">
+                    <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100 eds-l-pad-hor-3">
+                        <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">By making it easier for people to buy tickets with a streamlined purchase process, you could see a big jump in ticket sales. </p>
+                    </div>
+                </div>
+<!-- Forms start -->
+            <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
+                <div class="eds-g-group">
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">How many steps does someone have to take to buy a ticket to your event?</p>
+                        </div>
+                        <form class="responsive-form">
+                            <input type="text" placeholder="" value="" class="[modifier class]" />
+                        </form>
+                        <div class="eds-l-mar-top-1">
+                            <aside class="responsive-form__hint eds-text-color--grey-500">10 steps is common</aside>
+                        </div>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">What percent of people visit your website from a mobile device?</p>
+                        </div>
+                        <form class="responsive-form">
+                            <input type="text" placeholder="" value="" class="[modifier class]" />
+                        </form>
+                        <div class="eds-l-mar-top-1">
+                            <aside class="responsive-form__hint eds-text-color--grey-500">50% is common</aside>
+                        </div>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">What percent of people visit your website from a mobile device?</p>
+                        </div>
+                                            <form class="responsive-form">
+                        <div class="g-group">
+                                <div class="responsive-form__radio l-mar-top-1">
+                                    <input type="radio" value="" id="radio-1" name="radio" />
+                                    <label for="radio-1">Yes</label>
+                                    <label class="custom-input--delegate" for="radio-1"></label>
+                                </div>
+                                <div class="responsive-form__radio l-mar-top-1">
+                                    <input type="radio" value="" id="radio-2" name="radio" />
+                                    <label for="radio-2">No</label>
+                                    <label class="custom-input--delegate" for="radio-2"></label>
+                                </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+<!-- deapsea blue section -->
+            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-3.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-3.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Gears">
+            <div class="eds-bg-color--deepsea-blue-500">
+                <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
+                    <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Let’s talk about effeciency.</p>
+                </div>
+            </div>
+<!-- Bottom Button -->
+        <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-btn-overlap">
+            <div class="eds-g-cell-4-12 eds-g-offset-4-12 eds-g-cell-md-2-12 eds-g-offset-md-5-12 eds-l-mar-bot-6">
+                 <a href="https://www.evbqa.com/l/roi-4" class="mktg-btn eds-align--center mktg-btn-shadow">Next</a>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- END: Sign up Form -->
+</section>
+
+<!-- Marketing Form -->
+<section id='section4' class="sectionPanel eds-bg-color--grey-100">
+    <div class="mktg-grid-container eds-align--center mktg-l-pad-bot-80">
+        <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
+            <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
+            	<div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4 eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+                    <div class="eds-l-mar-bot-3">
+	                   <h2 class="eds-text-hm eds-text-color--grey-900">You’re likely pouring more time and money into your existing system than you realize. Let’s figure out how much you could save.</h2>
+                    </div>
+	                <div class="mktg-grey-border"></div>
+                </div>
+                <div class="mktg-l-pad-top-60 eds-g-group">
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">How much does your current system cost to maintain annually? (Consider hosting and software costs)</p>
+                        </div>
+                        <form class="responsive-form">
+                            <input type="text" placeholder="" value="" class="[modifier class]" />
+                        </form>
+                        <div class="eds-l-mar-top-1">
+                            <aside class="responsive-form__hint eds-text-color--grey-500">1000%+ is common</aside>
+                        </div>
+                    </div>
+                    <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                        <div class="eds-l-mar-bot-3">
+                            <p class="eds-text-bl eds-text-color--grey-800">How many hours a week do employees spend on manual tasks related to your current ticketing system?</p>
+                        </div>
+                        <form class="responsive-form">
+                            <input type="text" placeholder="" value="" class="[modifier class]" />
+                        </form>
+                        <div class="eds-l-mar-top-1">
+                            <aside class="responsive-form__hint eds-text-color--grey-500">3+ is common</aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- deapsea blue section -->
+            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-4.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-4.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
+            <div class="eds-bg-color--deepsea-blue-500">
+            <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
+                <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Just one step left</p>
+            </div>
+        </div>
+<!-- Bottom Button -->
+        <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-btn-overlap">
+            <div class="eds-g-cell-4-12 eds-g-offset-4-12 eds-g-cell-md-2-12 eds-g-offset-md-5-12 eds-l-mar-bot-6">
+                 <a href="https://www.evbqa.com/l/roi-5" class="mktg-btn eds-align--center mktg-btn-shadow">Next</a>
+            </div>
+        </div>
+        </div>
+    </div>
+<!-- END: Sign up Form -->
+</section>
+
+<!-- Marketing Form -->
+<section id='section5' class="sectionPanel eds-bg-color--grey-100">
+    <div class="mktg-grid-container eds-align--center mktg-l-pad-bot-80">
+        <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
+            <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
+            	<div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4 eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                    <div class="eds-l-mar-bot-3">
+	                   <h2 class="eds-text-hm eds-text-color--sunrise-orange-500">$$$ (Personalized answer goes here)</h2>
+                    </div>
+                    <p class="eds-text-bl eds-text-color--grey-900">You could make between $$$ - $$$$$$ more by switching to Eventbrite. </p>
+                </div>
+            </div>
+    </div>
+<!-- END: Sign up Form -->
+</section>
+
+
+<!-- Marketing Form -->
+<section id='section6' class="sectionPanel eds-bg-color--grey-100 mktg-landing-hero">
+    <div class="mktg-grid-container eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 mktg-l-pad-vert-80">
+        <div class="eds-g-cell eds-g-cell-12-12 eds-g-cell-sw-10-12 eds-g-offset-sw-1-12 mktg-form-bg">
+            <div class="mktg-form-inner">
+            	<div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-2-12 eds-g-cell-md-8-12 eds-l-pad-hor-3 mktg-l-pad-vert-40">
+                    <div class="eds-l-mar-bot-3">
+	                   <h2 class="eds-text-hm eds-text-color--sunrise-orange-500">$$$ (Personalized answer goes here)</h2>
+                    </div>
+                    <p class="eds-text-bl eds-text-color--grey-900">You could make between $$$ - $$$$$$ more by switching to Eventbrite. </p>
+                    <div class="mktg-l-pad-top-40 eds-l-mar-bot-3">
+                       <p class="eds-text-bl eds-text-color--grey-900">Your current clunky system is preventing interested buyers from completing their purchase, and causing your staff to waste hours each year on manual tasks. Save time and money by ditching your internal ticketing or registration system.</p>
+                    </div>
+                    <div class="mktg-grey-border"></div>
+                    <div class="mktg-l-pad-vert-80">
+                        <div class="eds-g-group">
+                            <div class="eds-l-mar-bot-3">
+                                <p class="eds-text-bl eds-text-color--grey-900">Ready to make more money?</p>
+                            </div>
+<!-- Start: Context Card 1 -->
+                            <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-cell-mn-1-2 eds-g-cell-lg-1-2 eds-l-pad-right-1 eds-l-pad-vert-3">
+                                <div class="mktg-context-card eds-text--center">
+                                    <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
+                                        <div class="mktg-context-card__image">
+                                            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="webpage icon">   
+                                        </div>
+                                    </div>
+                                    <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
+                                        <p class="eds-text-bl eds-text-color--grey-700"><a href="#" target="_blank">Watch a demo</a></p>
+                                    </div>
+                                </div>
+                            </div>
+<!-- END: Context Card 1 -->
+<!-- Start: Context Card 2 -->
+                            <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-cell-mn-1-2 eds-g-cell-lg-1-2 eds-l-pad-left-1 eds-l-pad-vert-3">
+                                <div class="mktg-context-card eds-text--center">
+                                    <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
+                                        <div class="mktg-context-card__image">
+                                            <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="headset icon">   
+                                        </div>
+                                    </div>
+                                    <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
+                                        <p class="eds-text-bl eds-text-color--grey-700"><a href="https://www.eventbrite.com/blog/academy/contact-eventbrite/?ref=mlp" target="_blank">Get in touch</a></p>
+                                    </div>
+                                </div>
+                            </div>
+<!-- END: Context Card 2 -->
+                        </div>
+                    </div>
+                    <div class="l-section">
+                       <p class="eds-text-bs eds-text-color--grey-600 mktg-text-medium eds-l-mar-vert-1">The numbers behind the calculator: </p>
+                    </div>
+                    <div class="eds-l-mar-bot-3">
+                       <p class="eds-text-bs eds-text-color--grey-600">According to a study by Ticketmaster, each additional step in the ticket purchase process causes 10% fewer people to buy tickets. Studies also show a 160% lift in purchase completion with mobile-optimized payments. We also assumed a $55k per year salary for the team member tasked with manual tasks related to ticketing and registration. </p>
+                    </div>
+                    <p class="eds-text-bs eds-text-color--grey-600">Learn more about these studies <a href="#" target="_blank">here.</a></p>    
+                </div>
+            </div>
+    </div>
+<!-- END: Sign up Form -->
+</section>
+
+
+</body>
+</html>

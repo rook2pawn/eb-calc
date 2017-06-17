@@ -1,0 +1,44 @@
+.mktg-landing-hero {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.svg),
+    linear-gradient(transparent, transparent);
+}
+
+.mktg-form-bg {
+	background-color: #fff;
+	margin-top: -100px;
+}
+
+.mktg-grey-border {
+	width: 40px;
+	border-top: 1px solid #D2D6DF;
+}
+
+.mktg-btn-overlap {
+    position: inherit;
+    z-index: 300;
+    margin-top: -22px;
+}
+
+.mktg-btn-shadow {
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
+    box-shadow: 0px 0px 5px 0px rgba(63,16,1,0.25);
+}
+
+/* Size: small-middle-width */
+@media screen and (max-width: 480px) {
+	.mktg-landing-hero {
+    	background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.png");
+    	background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.svg),
+    linear-gradient(transparent, transparent);
+	}
+}
+
+section.sectionPanel {
+  display:none;
+}
+
+section#section1 {
+  display:block;
+}
