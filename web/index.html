@@ -336,7 +336,13 @@
                     <p class="eds-text-bl eds-text-color--grey-900">You could make between $$$ - $$$$$$ more by switching to Eventbrite. </p>
 <script src="//app-sj11.marketo.com/js/forms2/js/forms2.min.js"></script>
 <form id="mktoForm_3193"></form>
-<script>MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193);</script>                              
+<script>MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
+    form.onSuccess(function(values, followUpUrl) {
+        location.href = "#6";
+        return false;
+    })
+});
+</script>                              
                 </div>
             </div>      
         </div>
