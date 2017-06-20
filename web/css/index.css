@@ -1,8 +1,35 @@
 .mktg-landing-hero {
+    linear-gradient(transparent, transparent);
+    display:none;
+}
+.mktg-landing-hero.section1 {
     background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.png");
     background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.svg),
-    linear-gradient(transparent, transparent);
 }
+.mktg-landing-hero.section2 {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-2.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-2.svg),
+}
+.mktg-landing-hero.section3 {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-3.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-3.svg),
+}
+.mktg-landing-hero.section4 {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-4.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-4.svg),
+}
+.mktg-landing-hero.section5 {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-5.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-5.svg),
+}
+.mktg-landing-hero.section6 {
+    background-image: url("https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-6.png");
+    background-image: url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-6.svg),
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 
 .mktg-form-bg {
 	background-color: #fff;

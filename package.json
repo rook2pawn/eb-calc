@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build" : "browserify app/index.js -o web/js/index-bundle.js",
-    "start" : "node server.js -p 5150"
+    "build": "browserify app/index.js -o web/js/index-bundle.js",
+    "start": "node server.js -p 5150"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
     "browserify": "^14.4.0",
     "ecstatic": "^2.2.1",
     "optimist": "^0.6.1",
-    "router-middleware": "^2.2.1"
+    "router-middleware": "^2.2.2"
   }
 }
