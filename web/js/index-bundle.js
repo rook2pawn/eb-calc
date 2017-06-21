@@ -80,6 +80,8 @@ $(window).ready(() => {
       activePanel = 1;
     }
     lib.showActivePanel(activePanel,panels);
+    $("html, body").animate({ scrollTop: 250 }, "slow");
+
   });
   window.onpopstate = function(e) {
     //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
