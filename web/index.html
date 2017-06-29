@@ -18,7 +18,7 @@
         </a>
         <div class="contact-number show-large text--truncated">
           <a href="tel:8669022531" class="header-link mktg-global-header__header-link js-d-track-link">
-            Contact us 866-902-2531 
+            Contact us 866-902-2531
           </a>
         </div>
       </div>
@@ -31,7 +31,7 @@
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </div>
 
   <!-- Header Image or Video -->
@@ -62,7 +62,7 @@
                <p class="eds-text-bl eds-text--center eds-text-color--grey-700">An internal solution may cost you more than you realize. Discover how much more revenue you can generate by switching to Eventbrite.</p>
              </div>
            </div>
-         </div>  
+         </div>
        </div>
        <div class="eds-g-cell-6-12 eds-g-offset-3-12 eds-g-cell-md-2-12 eds-g-offset-md-5-12 eds-l-mar-bot-6 mktg-btn-overlap">
          <a href="https://www.evbqa.com/l/roi-2" class="mktg-btn mktg-btn-shadow eds-align--center">Get started</a>
@@ -324,14 +324,24 @@
         <script src="//app-sj11.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_3193"></form>
         <script>MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
+          var df = window.history.state.descriptiveFields;
+          var txt = '';
+          Object.keys(df).forEach((key) => {
+            txt = txt.concat(key + ':' + df[key]).concat('\r\n');
+          })
+          form.onSubmit(function(){
+            form.vals({"MktoPersonNotes":txt});
+            //var vals = form.vals();
+            //alert("Submitted values: " + JSON.stringify(vals));
+          });
           form.onSuccess(function(values, followUpUrl) {
             location.href = "#6";
             return false;
           })
         });
-      </script>                              
+      </script>
     </div>
-  </div>      
+  </div>
 </div>
 <!-- END: Sign up Form -->
 </section>
@@ -361,7 +371,7 @@
             <div class="mktg-context-card eds-text--center">
               <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
                 <div class="mktg-context-card__image">
-                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="webpage icon">   
+                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="webpage icon">
                 </div>
               </div>
               <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
@@ -375,7 +385,7 @@
             <div class="mktg-context-card eds-text--center">
               <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
                 <div class="mktg-context-card__image">
-                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="headset icon">   
+                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="headset icon">
                 </div>
               </div>
               <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
@@ -392,7 +402,7 @@
      <div class="eds-l-mar-bot-3">
        <p class="eds-text-bs eds-text-color--grey-600">According to a study by Ticketmaster, each additional step in the ticket purchase process causes 10% fewer people to buy tickets. Studies also show a 160% lift in purchase completion with mobile-optimized payments. We also assumed a $55k per year salary for the team member tasked with manual tasks related to ticketing and registration. </p>
      </div>
-     <p class="eds-text-bs eds-text-color--grey-600">Learn more about these studies <a href="#" target="_blank">here.</a></p>    
+     <p class="eds-text-bs eds-text-color--grey-600">Learn more about these studies <a href="#" target="_blank">here.</a></p>
    </div>
  </div>
 </div>
