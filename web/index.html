@@ -14,7 +14,7 @@
     <div class="mktg-global-header global-header">
       <div class="major mktg-layout-align--horizontal-center">
         <a class="mktg-eb-logo js-d-track-link" href="https://www.eventbrite.com">
-          <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/logos/eventbrite_logo.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/logos/eventbrite_logo.png';this.onerror=null;" alt="Eventbrite logo">
+          <img src="/img/eventbrite_logo.svg" onerror="this.src='/img/eventbrite_logo.png';this.onerror=null;" alt="Eventbrite logo">
         </a>
         <div class="contact-number show-large text--truncated">
           <a href="tel:8669022531" class="header-link mktg-global-header__header-link js-d-track-link">
@@ -156,7 +156,7 @@
         </div>
       </div>
       <!-- deapsea blue section -->
-      <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-1.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-1.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
+      <img src="/img/roi-icon-1.svg" onerror="this.src='/img/roi-icon-1.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
       <div class="eds-bg-color--deepsea-blue-500">
         <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
           <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Now let’s talk about your purchase process.</p>
@@ -196,7 +196,7 @@
           </div>
         </div>
         <!-- Orange section section -->
-        <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-2.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-2.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Tickets">
+        <img src="/img/roi-icon-2.svg" onerror="this.src='/img/roi-icon-2.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Tickets">
         <div class="eds-bg-color--sunrise-orange-500">
           <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100 eds-l-pad-hor-3">
             <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">By making it easier for people to buy tickets with a streamlined purchase process, you could see a big jump in ticket sales. </p>
@@ -243,7 +243,7 @@
           </div>
         </div>
         <!-- deapsea blue section -->
-        <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-3.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-3.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Gears">
+        <img src="/img/roi-icon-3.svg" onerror="this.src='/img/roi-icon-3.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Gears">
         <div class="eds-bg-color--deepsea-blue-500">
           <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
             <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Let’s talk about effeciency.</p>
@@ -295,7 +295,7 @@
         </div>
       </div>
       <!-- deapsea blue section -->
-      <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-4.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-icon-4.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
+      <img src="/img/roi-icon-4.svg" onerror="this.src='/img/roi-icon-4.png';this.onerror=null;" class="eds-align--center mktg-roi-icon-1" alt="Credit Cards">
       <div class="eds-bg-color--deepsea-blue-500">
         <div class="eds-g-cell eds-g-cell-12-12 eds-g-offset-0-12 eds-g-cell-md-10-12 eds-g-offset-md-1-12 mktg-l-pad-bot-80 mktg-l-pad-top-100">
           <p class="eds-text-hs eds-text-color--white eds-text--center mktg-text-light">Just one step left</p>
@@ -323,21 +323,28 @@
         <p class="eds-text-bl eds-text-color--grey-900">A few last questions to get your ROI</p>
         <script src="//app-sj11.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_3193"></form>
-        <script>MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
-          var df = window.history.state.descriptiveFields;
-          var txt = '';
-          Object.keys(df).forEach((key) => {
-            txt = txt.concat(key + ':' + df[key]).concat('\r\n');
-          })
-          form.onSubmit(function(){
-            form.vals({"MktoPersonNotes":txt});
-            //var vals = form.vals();
-            //alert("Submitted values: " + JSON.stringify(vals));
+        <script>
+        $(window).ready(function() {
+          MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
+            var df = window.history.state.descriptiveFields;
+            var txt = '';
+            if (df) {
+              Object.keys(df).forEach((key) => {
+                console.log("key:", key, " value:", df[key]);
+                txt = txt.concat(key + ':' + df[key]).concat('\r\n');
+              })
+            }
+            form.onSubmit(function(){
+              form.vals({"MktoPersonNotes":txt});
+              //var vals = form.vals();
+              //alert("Submitted values: " + JSON.stringify(vals));
+            });
+            form.onSuccess(function(values, followUpUrl) {
+              location.href = "#6";
+              return false;
+            })
           });
-          form.onSuccess(function(values, followUpUrl) {
-            location.href = "#6";
-            return false;
-          })
+
         });
       </script>
     </div>
@@ -371,7 +378,7 @@
             <div class="mktg-context-card eds-text--center">
               <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
                 <div class="mktg-context-card__image">
-                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/web-page-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="webpage icon">
+                  <img src="/img/web-page-brite-surf.svg" onerror="this.src='/img/web-page-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="webpage icon">
                 </div>
               </div>
               <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
@@ -385,7 +392,7 @@
             <div class="mktg-context-card eds-text--center">
               <div class="mktg-context-card__header eds-bg-color--surf-blue-500">
                 <div class="mktg-context-card__image">
-                  <img src="https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.svg" onerror="this.src='https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/icons/custom/support-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="headset icon">
+                  <img src="/img/support-brite-surf.svg" onerror="this.src='/img/support-brite-surf.png';this.onerror=null;" class="mktg-context-img" alt="headset icon">
                 </div>
               </div>
               <div class="eds-bg-color--grey-100 mktg-context-card_body context-height">
