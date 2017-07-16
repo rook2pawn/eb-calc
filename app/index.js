@@ -34,12 +34,14 @@ $(window).ready(() => {
 
     // special case to preload the conversion values
     if (activePanel === 2) {
+      fields.field1 = formData[id]['typeOfEvent'];
+      descriptiveFields['typeOfEvent'] = lib.mapEvents(fields.field1);
       fields.field2 = parseFloat(formData[id]['amountChargedForTickets']);
-      descriptiveFields['amountChargedForTickets'] = fields.field2;
+      descriptiveFields['amountChargedForTickets'] = lib.mapTicketPrice(fields.field2);
       fields.field3 = parseFloat(formData[id]['howManyPaidEvents']);
-      descriptiveFields['howManyPaidEvents'] = fields.field3;
+      descriptiveFields['howManyPaidEvents'] = lib.mapNumberOfPaidEvents(fields.field3);
       fields.field4 = parseFloat(formData[id]['averageAttendence']);
-      descriptiveFields['averageAttendence'] = fields.field4;
+      descriptiveFields['averageAttendence'] = lib.mapAverageAttendence(fields.field4);
       fields.field5 = parseFloat(formData[id]['howManyVisitEventWebsiteYearly']);
       descriptiveFields['howManyVisitEventWebsiteYearly'] = fields.field5;
 

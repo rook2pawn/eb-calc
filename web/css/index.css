@@ -6,8 +6,8 @@ div.cf_widget{font-family:"Helvetica","Arial", sans-serif;font-weight:normal;fon
 .cf_widget div{display:block;float:none;}
 div.cf_widget{display:inline-block;}
 div.cf_widget{*display:inline;_display:inline;}
-.cf_widget .cf_synd_icon_fb_sm{background:url(http://d2yeu2mwujl2s5.cloudfront.net/3.33-63/images/socialicon-14-sprite.png) 0 0 no-repeat;}
-.cf_widget .cf_synd_icon_tw_sm{background:url(http://d2yeu2mwujl2s5.cloudfront.net/3.33-63/images/socialicon-14-sprite.png) 0 -14px no-repeat;}
+.cf_widget .cf_synd_icon_fb_sm{background:url(/img/socialicon-14-sprite.png) 0 0 no-repeat;}
+.cf_widget .cf_synd_icon_tw_sm{background:url(/img/socialicon-14-sprite.png) 0 -14px no-repeat;}
 .cf_widget_socialsignon .cf_sign_on{border:1px solid #dadada;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;background-color:#eee;padding:10px;width:300px;}
 .cf_widget_socialsignon .cf_sign_on_caption{padding-bottom:5px;}
 .cf_widget_socialsignon .cf_sign_on_button{line-height:14px;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;border:1px solid #8c8c8c;padding:5px 5px;width:80px;float:left;background:#c5c5c5;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#c5c5c5');background:-webkit-gradient(linear, left top, left bottom, from(#fff), to(#c5c5c5));background:-moz-linear-gradient(top,  #fff,  #c5c5c5);margin-right:5px;font-family:helvetica, arial, sans-serif;font-size:13px;color:#333;cursor:pointer;}
@@ -412,12 +412,12 @@ body{font-family:Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica N
 /*! CSS Used from: http://curlpaste.com:5150/css/index.css */
 .mktg-landing-hero{linear-gradient(transparent, transparent);
     display:none;}
-.mktg-landing-hero.section1{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1.svg),;}
-.mktg-landing-hero.section2{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-2.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-2.svg),;}
-.mktg-landing-hero.section3{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-3.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-3.svg),;}
-.mktg-landing-hero.section4{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-4.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-4.svg),;}
-.mktg-landing-hero.section5{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-5.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-5.svg),;}
-.mktg-landing-hero.section6{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-6.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-6.svg),;background-position:top center;background-repeat:no-repeat;background-size:100%;}
+.mktg-landing-hero.section1{background-image:url(/img/roi-header-1.png);background-image:url(/img/roi-header-1.svg),;}
+.mktg-landing-hero.section2{background-image:url(/img/roi-header-2.png);background-image:url(/img/roi-header-2.svg),;}
+.mktg-landing-hero.section3{background-image:url(/img/roi-header-3.png);background-image:url(/img/roi-header-3.svg),;}
+.mktg-landing-hero.section4{background-image:url(/img/roi-header-4.png);background-image:url(/img/roi-header-4.svg),;}
+.mktg-landing-hero.section5{background-image:url(/img/roi-header-5.png);background-image:url(/img/roi-header-5.svg),;}
+.mktg-landing-hero.section6{background-image:url(/img/roi-header-6.png);background-image:url(/img/roi-header-6.svg),;background-position:top center;background-repeat:no-repeat;background-size:100%;}
 .mktg-form-bg{background-color:#fff;margin-top:-100px;}
 .mktg-l-pad-top-100{padding-top:100px;}
 .mktg-roi-icon-1{position:inherit;z-index:100;margin-bottom:-63px;}
@@ -425,7 +425,7 @@ body{font-family:Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica N
 .mktg-btn-overlap{position:inherit;z-index:300;margin-top:-22px;}
 .mktg-btn-shadow{-webkit-box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);-moz-box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);}
 @media screen and (max-width: 480px){
-.mktg-landing-hero{background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.png);background-image:url(https://s3.amazonaws.com/eventbrite-s3/marketing/landingpages/assets/graphics/roi-header-1-mobile.svg),
+.mktg-landing-hero{background-image:url(/img/roi-header-1-mobile.png);background-image:url(/img/roi-header-1-mobile.svg),
     linear-gradient(transparent, transparent);}
 }
 section.sectionPanel{display:none;}

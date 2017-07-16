@@ -4,10 +4,10 @@ const showActivePanel = function(activePanel, panels) {
   for (var i = 1; i <= length; i++) {
     if (i == activePanel) {
       panels[id].fadeIn();
-      $('section.mktg-landing-hero.section'+i).show();      
+      $('section.mktg-landing-hero.section'+i).show();
     } else {
       panels['section'+i].hide();
-      $('section.mktg-landing-hero.section'+i).hide();      
+      $('section.mktg-landing-hero.section'+i).hide();
     }
   }
 }
@@ -25,7 +25,7 @@ const getActivePanelFromURL = function(loc) {
     '#4' : 4,
     '#5' : 5,
     '#6' : 6,
-    '#7' : 7    
+    '#7' : 7
   }
   if (mapping[loc.hash] !== undefined) {
     return mapping[loc.hash]
@@ -34,3 +34,70 @@ const getActivePanelFromURL = function(loc) {
 
 }
 exports.getActivePanelFromURL = getActivePanelFromURL;
+
+const mapEvents = function(evt) {
+  var map = {
+    "Classes" : "Registration",
+    "Conferences" : "Registration",
+    "FestivalsAndConsumerEvents" : "Festivals/Special Events",
+    "MusicFestivalsAndConcerts" : "Music/Promoters",
+    "NonProfitEvents" : "Registration",
+    "RacesAndParticipatorySports" : "Participatory Sports",
+    "UniversityEducation" : "Registration"
+  };
+  return map[evt];
+};
+
+exports.mapEvents = mapEvents;
+
+const mapTicketPrice = function(price) {
+
+  var map = {
+    "0" : "Free",
+    "5" : "$1–$10",
+    "18" : "$11–$25",
+    "38" : "$26–$50",
+    "63" : "$51–$75",
+    "88" : "$76–$100",
+    "113" : "$101–$125",
+    "138" : "$126-$150",
+    "151" : "$151+"
+  }
+  return map[price];
+}
+exports.mapTicketPrice = mapTicketPrice;
+
+const mapNumberOfPaidEvents = function(number) {
+
+  var map = {
+    "1": "1",
+    "2.5" : "2–3",
+    "4.5" : "4–5",
+    "6.5" : "6–7",
+    "9" : "8–10",
+    "15.5" : "11–20",
+    "23" : "21–25",
+    "26" : "26+",
+    "0"  : "0"
+  };
+  return map[number];
+};
+exports.mapNumberOfPaidEvents = mapNumberOfPaidEvents;
+
+const mapAverageAttendence = function(attendence) {
+
+  var map = {
+    "50" : "1–100",
+    "175" : "101–250",
+    "375" : "251–500",
+    "750" : "501–1000",
+    "1500" : "1001–2000",
+    "2500" : "2001–3000",
+    "4000" : "3001-5000",
+    "5001" : "5001+"
+  };
+  return map[attendence];
+
+};
+
+exports.mapAverageAttendence = mapAverageAttendence;

@@ -94,7 +94,7 @@
               <option value="Conferences">Conferences</option>
               <option value="FestivalsAndConsumerEvents">Festivals & Consumer Events</option>
               <option value="MusicFestivalsAndConcerts">Music Festivals & Concerts</option>
-              <option value="Non-profitEvents">Non-profit Events</option>
+              <option value="NonProfitEvents">Non-profit Events</option>
               <option value="RacesAndParticipatorySports">Races and Participatory Sports</option>
               <option value="UniversityEducation">University/Education</option>
             </select>
@@ -112,7 +112,8 @@
               <option value="63">$51–$75</option>
               <option value="88">$76–$100</option>
               <option value="113">$101–$125</option>
-              <option value="150">$150+</option>
+              <option value="138">$126–$150</option>
+              <option value="151">$151+</option>
             </select>
           </div>
           <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
@@ -144,7 +145,8 @@
               <option value="750">501–1000</option>
               <option value="1500">1001–2000</option>
               <option value="2500">2001–3000</option>
-              <option value="5000">5001+</option>
+              <option value="4000">3001–5000</option>
+              <option value="5001">5001+</option>
             </select>
           </div>
           <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-vert-40">
@@ -324,28 +326,30 @@
         <script src="//app-sj11.marketo.com/js/forms2/js/forms2.min.js"></script>
         <form id="mktoForm_3193"></form>
         <script>
-        $(window).ready(function() {
           MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
-            var df = window.history.state.descriptiveFields;
-            var txt = '';
-            if (df) {
+            form.onSubmit(function(){
+              var df = window.history.state.descriptiveFields;
+              var obj = {};
+              obj.avg_attendance__c = df.averageAttendence;
+              obj.avg_ticket_price__c = df.amountChargedForTickets;
+              obj.events_per_year__c = df.howManyPaidEvents;
+              obj.Vertical__c = df.typeOfEvent;
+              var txt = '';
               Object.keys(df).forEach((key) => {
                 console.log("key:", key, " value:", df[key]);
                 txt = txt.concat(key + ':' + df[key]).concat('\r\n');
-              })
-            }
-            form.onSubmit(function(){
-              form.vals({"MktoPersonNotes":txt});
-              //var vals = form.vals();
-              //alert("Submitted values: " + JSON.stringify(vals));
+              });
+              obj.MktoPersonNotes = txt;
+              console.log("Setting form vals to obj:", obj);
+              form.vals(obj);
+              var vals = form.vals();
+              console.log("Submitted values: " + JSON.stringify(vals));
             });
             form.onSuccess(function(values, followUpUrl) {
               location.href = "#6";
               return false;
             })
           });
-
-        });
       </script>
     </div>
   </div>
