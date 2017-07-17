@@ -332,7 +332,7 @@
         <form id="mktoForm_3193"></form>
         <script>
           MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
-            //console.log(form.getValues());
+            console.log("GET VALUES ON FORM:", form.getValues());
             form.onSubmit(function(){
               var df = window.history.state.descriptiveFields;
               var obj = {};
