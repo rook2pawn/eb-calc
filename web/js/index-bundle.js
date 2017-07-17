@@ -97,7 +97,6 @@ $(window).ready(() => {
       var txt_finalDollarFigure = finalDollarFigure.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
       var txt_lowerRange = '$'.concat(lowerRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
       var txt_higherRange = '$'.concat(higherRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
-      finalDollarFigure = 150;
       if (finalDollarFigure <= 200) {
         $('div.isLessThan200').show();
         $('div.isGreaterThan200').hide();
