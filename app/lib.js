@@ -1,3 +1,5 @@
+const Joi = require('joi-browser');
+
 const showActivePanel = function(activePanel, panels) {
   var id = 'section'+activePanel;
   var length = Object.keys(panels).length;
@@ -101,3 +103,38 @@ const mapAverageAttendence = function(attendence) {
 };
 
 exports.mapAverageAttendence = mapAverageAttendence;
+
+const checkFilled = function(form, activePanel) {
+  var schema = {};
+  switch (activePanel) {
+    case 2 :
+      schema = Joi.object().keys({
+      amountChargedForTickets : Joi.string().required(),
+      averageAttendence : Joi.string().required(),
+      howManyPaidEvents : Joi.string().required(),
+      howManyVisitEventWebsiteYearly : Joi.string().required(),
+      typeOfEvent : Joi.string().required()
+      });
+      return Joi.validate(form,schema);
+    break;
+    case 3 :
+      schema = Joi.object().keys({
+      howManyStepsToBuyTicket : Joi.string().required(),
+      isBuiltForMobile : Joi.string().required(),
+      whatPercentMobile : Joi.string().required()
+      })
+      return Joi.validate(form,schema);
+    break;
+    case 4 :
+      schema = Joi.object().keys({
+      hoursEmployeesSpendOnManualTasks :Joi.string().required(),
+      howMuchToMaintainAnnually :Joi.string().required()
+      });
+      return Joi.validate(form,schema);
+    break;
+    default:
+      return Joi.validate(form, schema);
+    break;
+  }
+};
+exports.checkFilled = checkFilled;

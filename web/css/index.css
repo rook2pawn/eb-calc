@@ -1,3 +1,14 @@
+div.error {
+  border: thin dotted red;
+  padding:1em;
+  width:16em;
+  display:none;
+  z-index:20;
+  font-weight:bold;
+}
+div.isLessThan200 {
+  display:none;
+}
 /*! CSS Used from: http://d2yeu2mwujl2s5.cloudfront.net/3.33-63/styles/widgets.css */
 .cf_widget .cf_clear{clear:both;float:none;}
 div.cf_widget{font-family:"Helvetica","Arial", sans-serif;font-weight:normal;font-size:12px;color:#000;text-align:left;}

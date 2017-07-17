@@ -8,7 +8,6 @@
 
 <body>
 
-
   <!-- Marketing Nav Bar -->
   <div class="mktg-gh">
     <div class="mktg-global-header global-header">
@@ -78,6 +77,8 @@
       <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
         <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
          <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4 eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+          <div class='error'>Please double check that you’ve filled out each field and try again.</div>
+
           <div class="eds-l-mar-bot-3">
             <h2 class="eds-text-hm eds-text-color--grey-900">Let's start with the basics</h2>
           </div>
@@ -209,6 +210,7 @@
         <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
           <div class="eds-g-group">
             <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4  eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+              <div class='error'>Please double check that you’ve filled out each field and try again.</div>
               <div class="eds-l-mar-bot-3">
                 <p class="eds-text-bl eds-text-color--grey-800">How many steps does someone have to take to buy a ticket to your event?</p>
               </div>
@@ -271,6 +273,8 @@
       <div class="eds-g-cell eds-g-cell-12-12 eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3 eds-g-cell-sw-10-12 mktg-form-bg">
         <div class="mktg-form-inner eds-g-grid eds-l-sn-mar-hor-3 eds-l-sm-mar-hor-3">
          <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-1-4 eds-g-cell-md-1-2 eds-l-pad-hor-3 mktg-l-pad-top-40">
+          <div class='error' style='position:relative;'>Please double check that you’ve filled out each field and try again.</div>
+
           <div class="eds-l-mar-bot-3">
             <h2 class="eds-text-hm eds-text-color--grey-900">You’re likely pouring more time and money into your existing system than you realize. Let’s figure out how much you could save.</h2>
           </div>
@@ -328,6 +332,7 @@
         <form id="mktoForm_3193"></form>
         <script>
           MktoForms2.loadForm("//app-sj11.marketo.com", "269-CEG-133", 3193,function(form) {
+            //console.log(form.getValues());
             form.onSubmit(function(){
               var df = window.history.state.descriptiveFields;
               var obj = {};
@@ -365,18 +370,32 @@
     <div class="eds-g-cell eds-g-cell-12-12 eds-g-cell-sw-10-12 eds-g-offset-sw-1-12 mktg-form-bg">
       <div class="mktg-form-inner">
        <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-offset-0-12 eds-g-offset-md-2-12 eds-g-cell-md-8-12 eds-l-pad-hor-3 mktg-l-pad-vert-40">
-        <div class="eds-l-mar-bot-3">
-          <h2 class="eds-text-hm eds-text-color--sunrise-orange-500">$$$ <span id='finalDollarFigure'></span></h2>
-        </div>
-        <p class="eds-text-bl eds-text-color--grey-900">You could make between <span class='lowerRange'></span> - <span class='higherRange'></span> more by switching to Eventbrite. </p>
-        <div class="mktg-l-pad-top-40 eds-l-mar-bot-3">
-         <p class="eds-text-bl eds-text-color--grey-900">Your current clunky system is preventing interested buyers from completing their purchase, and causing your staff to waste hours each year on manual tasks. Save time and money by ditching your internal ticketing or registration system.</p>
+       <div class='isLessThan200'>
+          <div class="eds-l-mar-bot-3">
+            <h2 class="eds-text-hm eds-text-color--sunrise-orange-500">Wow, you’re awesome!</h2>
+          </div>
+          <p class="eds-text-bl eds-text-color--grey-900">You’ve clearly put a lot of thought into streamlining your system. You might not save money by switching systems, but it’s worth considering how event technology could help you sell more tickets. Check out <a href="https://www.eventbrite.com/blog/academy/sell-more-ticketing-registration-technology/" target="_blank">7 Strategies to Sell More With Your Ticketing &amp; Registration Tech</a> to learn more</p>
+         </div>
+       </div>
+       <div class='isGreaterThan200'>
+          <div class="eds-l-mar-bot-3">
+            <h2 class="eds-text-hm eds-text-color--sunrise-orange-500"><span id='finalDollarFigure'></span></h2>
+          </div>
+          <p class="eds-text-bl eds-text-color--grey-900">You could make between <span class='lowerRange'></span> - <span class='higherRange'></span> more by switching to Eventbrite. </p>
+          <div class="mktg-l-pad-top-40 eds-l-mar-bot-3">
+           <p class="eds-text-bl eds-text-color--grey-900">Your current clunky system is preventing interested buyers from completing their purchase, and causing your staff to waste hours each year on manual tasks. Save time and money by ditching your internal ticketing or registration system.</p>
+         </div>
        </div>
        <div class="mktg-grey-border"></div>
        <div class="mktg-l-pad-vert-80">
         <div class="eds-g-group">
           <div class="eds-l-mar-bot-3">
+            <div class='isLessThan200'>
+            <p class="eds-text-bl eds-text-color--grey-900">We’d love to help you identify new ways to sell more and increase your revenue. <a href="https://www.eventbrite.com/blog/academy/contact-eventbrite/" target="_blank">Contact us here</a> or call 866-902-2531 to get started. </p>
+            </div>
+            <div class='isGreaterThan200'>
             <p class="eds-text-bl eds-text-color--grey-900">We'd love to help you make this revenue a reality. <a href="https://www.eventbrite.com/blog/academy/contact-eventbrite/" target="_blank">Contact us here</a> or call 866-902-2531 to get started. </p>
+            </div>
           </div>
           <!-- Start: Context Card 1 -->
           <div class="eds-g-cell eds-g-cell--has-overflow eds-g-cell-1-1 eds-g-cell-mn-1-2 eds-g-cell-lg-1-2 eds-l-pad-right-1 eds-l-pad-vert-3">

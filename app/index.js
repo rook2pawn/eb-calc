@@ -32,6 +32,21 @@ $(window).ready(() => {
     const form = el.find('form.responsive-form');
     formData[id] = qs.parse(form.serialize());
 
+    console.log("formData at id:", id, formData[id]);
+    var obj = lib.checkFilled(formData[id],activePanel);
+    if (obj.error !== null) {
+      $(id + " div.error").show();
+      if (activePanel == 2) {
+        $("html, body").animate({ scrollTop: 250 }, "slow");
+      }
+      if (activePanel == 3) {
+        $("html, body").animate({ scrollTop: 950 }, "slow");
+      }
+      if (activePanel == 4) {
+        $("html, body").animate({ scrollTop: 250 }, "slow");
+      }
+      return;
+    }
     // special case to preload the conversion values
     if (activePanel === 2) {
       fields.field1 = formData[id]['typeOfEvent'];
@@ -81,7 +96,11 @@ $(window).ready(() => {
       var txt_finalDollarFigure = finalDollarFigure.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
       var txt_lowerRange = '$'.concat(lowerRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
       var txt_higherRange = '$'.concat(higherRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
-      $('span#finalDollarFigure').html(txt_finalDollarFigure);
+      if (finalDollarFigure <= 200) {
+        $('div.isLessThan200').show();
+        $('div.isGreaterThan200').hide();
+      }
+      $('span#finalDollarFigure').html('$$$ ' + txt_finalDollarFigure);
       $('span.lowerRange').html(txt_lowerRange);
       $('span.higherRange').html(txt_higherRange);
       descriptiveFields['finalDollarFigure'] = txt_finalDollarFigure;
