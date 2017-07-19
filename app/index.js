@@ -34,6 +34,7 @@ $(window).ready(() => {
 
     console.log("formData at id:", id, formData[id]);
     var obj = lib.checkFilled(formData[id],activePanel);
+    console.log("validation obj:", obj);
     if (obj.error !== null) {
       $(id + " div.error").show();
       if (activePanel == 2) {

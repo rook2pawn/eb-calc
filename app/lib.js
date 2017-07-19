@@ -112,22 +112,22 @@ const checkFilled = function(form, activePanel) {
       amountChargedForTickets : Joi.string().required(),
       averageAttendence : Joi.string().required(),
       howManyPaidEvents : Joi.string().required(),
-      howManyVisitEventWebsiteYearly : Joi.string().required(),
+      howManyVisitEventWebsiteYearly : Joi.number().required(),
       typeOfEvent : Joi.string().required()
       });
       return Joi.validate(form,schema);
     break;
     case 3 :
       schema = Joi.object().keys({
-      howManyStepsToBuyTicket : Joi.string().required(),
+      howManyStepsToBuyTicket : Joi.number().required(),
       isBuiltForMobile : Joi.string().required(),
-      whatPercentMobile : Joi.string().required()
+      whatPercentMobile : Joi.number().min(0).max(100).required()
       })
       return Joi.validate(form,schema);
     break;
     case 4 :
       schema = Joi.object().keys({
-      hoursEmployeesSpendOnManualTasks :Joi.string().required(),
+      hoursEmployeesSpendOnManualTasks :Joi.number().required(),
       howMuchToMaintainAnnually :Joi.string().required()
       });
       return Joi.validate(form,schema);
