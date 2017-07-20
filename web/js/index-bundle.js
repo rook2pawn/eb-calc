@@ -267,7 +267,7 @@ const checkFilled = function(form, activePanel) {
     case 4 :
       schema = Joi.object().keys({
       hoursEmployeesSpendOnManualTasks :Joi.number().required(),
-      howMuchToMaintainAnnually :Joi.string().required()
+      howMuchToMaintainAnnually :Joi.number().required()
       });
       return Joi.validate(form,schema);
     break;
