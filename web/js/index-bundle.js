@@ -34,6 +34,9 @@ $(window).ready(() => {
     formData[id] = qs.parse(form.serialize());
 
     console.log("formData at id:", id, formData[id]);
+    if (activePanel === 4) {
+      formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[$,]/g,"");
+    }
     var obj = lib.checkFilled(formData[id],activePanel);
     console.log("validation obj:", obj);
     if (obj.error !== null) {
