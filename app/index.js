@@ -79,6 +79,7 @@ $(window).ready(() => {
 
     if (activePanel === 4) {
 
+      formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[$,]/g,"");
       fields.field9 = parseFloat(formData[id]['howMuchToMaintainAnnually']);
       descriptiveFields['howMuchToMaintainAnnually'] = fields.field9;
       fields.field10 = parseFloat(formData[id]['hoursEmployeesSpendOnManualTasks']);
