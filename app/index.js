@@ -64,7 +64,7 @@ $(window).ready(() => {
       fields.field5 = parseFloat(formData[id]['howManyVisitEventWebsiteYearly']);
       descriptiveFields['howManyVisitEventWebsiteYearly'] = fields.field5;
 
-      var c1 = (fields.field3 * fields.field4) / fields.field5;
+      var c1 = ((fields.field3 * fields.field4) / fields.field5) * 100;
       $('#calculation1').html(c1.toFixed(2) + '%');
 
       var c2 = 100 - c1;
@@ -74,7 +74,7 @@ $(window).ready(() => {
     if (activePanel === 3) {
       fields.field6 = parseFloat(formData[id]['howManyStepsToBuyTicket']);
       descriptiveFields['howManyStepsToBuyTicket'] = fields.field6;
-      fields.field7 = parseFloat(formData[id]['whatPercentMobile']);
+      fields.field7 = (parseFloat(formData[id]['whatPercentMobile']) / 100);
       descriptiveFields['whatPercentMobile'] = fields.field7;
       fields.field8 = (formData[id]['isBuiltForMobile'] === 'NoPurchaseBuiltForMobile') ? false : true;
       descriptiveFields['isBuiltForMobile'] = fields.field8;
@@ -88,10 +88,13 @@ $(window).ready(() => {
       fields.field10 = parseFloat(formData[id]['hoursEmployeesSpendOnManualTasks']);
       descriptiveFields['hoursEmployeesSpendOnManualTasks'] = fields.field10;
       var finalDollarFigure = 0;
-      finalDollarFigure += ((fields.field6 - 3) * 0.1 * fields.field5 * fields.field2);
+      finalDollarFigure += ((fields.field6 - 3) * 0.1 * fields.field4 * fields.field2);
 
       if (fields.field8 === false) {
-        finalDollarFigure += (fields.field5 * fields.field7 * 1.6);
+        console.log("MOBILE NO: field 4:", fields.field4, " field 7 :", fields.field7, " field2:", fields.field2);
+        const amt = (fields.field4 * fields.field7 * fields.field2 * 1.6);
+        console.log("field4 * field7 * 1.6 * field2 = " + amt);
+        finalDollarFigure += amt;
       }
 
       finalDollarFigure += fields.field9;
@@ -105,7 +108,7 @@ $(window).ready(() => {
         $('div.isLessThan200').show();
         $('div.isGreaterThan200').hide();
       }
-      $('span#finalDollarFigure').html('$$$ ' + txt_finalDollarFigure);
+      $('span#finalDollarFigure').html('$ ' + txt_finalDollarFigure);
       $('span.lowerRange').html(txt_lowerRange);
       $('span.higherRange').html(txt_higherRange);
       descriptiveFields['finalDollarFigure'] = txt_finalDollarFigure;
