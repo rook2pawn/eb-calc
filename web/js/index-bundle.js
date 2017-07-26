@@ -65,11 +65,20 @@ $(window).ready(() => {
       fields.field5 = parseFloat(formData[id]['howManyVisitEventWebsiteYearly']);
       descriptiveFields['howManyVisitEventWebsiteYearly'] = fields.field5;
 
-      var c1 = ((fields.field3 * fields.field4) / fields.field5) * 100;
+      var howManyPaidEvents = fields.field3;
+      if (howManyPaidEvents == 0) {
+        howManyPaidEvents = 1;
+      }
+
+      var c1 = ((howManyPaidEvents * fields.field4) / fields.field5) * 100;
       $('#calculation1').html(c1.toFixed(2) + '%');
 
       var c2 = 100 - c1;
-      $('#calculation2').html(c2.toFixed(2) + '%');
+      if (c2 <= 0) {
+        $('#calculation2').html('0%');
+      } else {
+        $('#calculation2').html(c2.toFixed(2) + '%');
+      }
     }
 
     if (activePanel === 3) {
@@ -105,10 +114,17 @@ $(window).ready(() => {
       var txt_finalDollarFigure = finalDollarFigure.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
       var txt_lowerRange = '$'.concat(lowerRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
       var txt_higherRange = '$'.concat(higherRange.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,'));
+
       if (finalDollarFigure <= 200) {
+        $('p#errorState5').hide();
         $('div.isLessThan200').show();
         $('div.isGreaterThan200').hide();
+      } else {
+        $('p#errorState5').show();
+        $('div.isLessThan200').hide();
+        $('div.isGreaterThan200').show();
       }
+
       $('span#finalDollarFigure').html('$ ' + txt_finalDollarFigure);
       $('span.lowerRange').html(txt_lowerRange);
       $('span.higherRange').html(txt_higherRange);
