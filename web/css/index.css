@@ -1,10 +1,10 @@
 div.error {
-  border: thin dotted red;
+  border: thin 1px red;
   padding:1em;
   width:16em;
   display:none;
   z-index:20;
-  font-weight:bold;
+  font-weight:normal;
 }
 div.isLessThan200 {
   display:none;
