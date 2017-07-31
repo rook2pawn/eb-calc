@@ -12,7 +12,7 @@ var fields = {};
 // used to communicate back to marketo in MktoPersonNotes field
 var descriptiveFields = {};
 
-$(window).ready(() => {
+$(window).ready(function() {
 
   // setup panels
   for (var i = 1; i <= 6; i++) {
@@ -23,7 +23,7 @@ $(window).ready(() => {
   var activePanel = lib.getActivePanelFromURL(window.location) || activePanel;
   lib.showActivePanel(activePanel,panels);
 
-  $('section a.mktg-btn').click((e) => {
+  $('section a.mktg-btn').click(function(e) {
     e.preventDefault();
 
     // get form data within the section
@@ -32,12 +32,14 @@ $(window).ready(() => {
     const form = el.find('form.responsive-form');
     formData[id] = qs.parse(form.serialize());
 
-    console.log("formData at id:", id, formData[id]);
+//    console.log("formData at id:", id, formData[id]);
+
     if (activePanel === 4) {
       formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[$,]/g,"");
     }
     var obj = lib.checkFilled(formData[id],activePanel);
-    console.log("validation obj:", obj);
+    //console.log("validation obj:", obj);
+
     if (obj.error !== null) {
       $(id + " div.error").show();
       if (activePanel == 2) {
@@ -100,9 +102,9 @@ $(window).ready(() => {
       finalDollarFigure += ((fields.field6 - 3) * 0.1 * fields.field4 * fields.field2);
 
       if (fields.field8 === false) {
-        console.log("MOBILE NO: field 4:", fields.field4, " field 7 :", fields.field7, " field2:", fields.field2);
+        //console.log("MOBILE NO: field 4:", fields.field4, " field 7 :", fields.field7, " field2:", fields.field2);
         const amt = (fields.field4 * fields.field7 * fields.field2 * 1.6);
-        console.log("field4 * field7 * 1.6 * field2 = " + amt);
+        //console.log("field4 * field7 * 1.6 * field2 = " + amt);
         finalDollarFigure += amt;
       }
 

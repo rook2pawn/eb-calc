@@ -4,7 +4,6 @@
 <head>
   <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no,text/html' name='viewport'>
   <link rel="stylesheet" type="text/css" href="css/index.css" />
-
   <script type='text/javascript' src='js/jquery-3.2.1.min.js'></script>
   <script type='text/javascript' src='js/index-bundle.js'></script>
 </head>
@@ -157,7 +156,7 @@
             <div class="eds-l-mar-bot-3">
               <p class="eds-text-bl eds-text-color--grey-800">How many people visit your event website each year?</p>
             </div>
-            <input name='howManyVisitEventWebsiteYearly' type="text" placeholder="" value="" class="[modifier class]" />
+            <input name='howManyVisitEventWebsiteYearly' type="number" pattern="[0-9]*" placeholder="" value="" class="[modifier class]" />
           </div>
         </div>
       </div>
@@ -220,7 +219,7 @@
               <div class="eds-l-mar-bot-3">
                 <p class="eds-text-bl eds-text-color--grey-800">How many steps does someone have to take to buy a ticket to your event?</p>
               </div>
-              <input name='howManyStepsToBuyTicket' type="text" placeholder="" value="" class="[modifier class]" />
+              <input name='howManyStepsToBuyTicket' type="number" pattern="[0-9]*" placeholder="" value="" class="[modifier class]" />
               <div class="eds-l-mar-top-1">
                 <aside class="responsive-form__hint eds-text-color--grey-500">10 steps is common</aside>
               </div>
@@ -229,7 +228,7 @@
               <div class="eds-l-mar-bot-3">
                 <p class="eds-text-bl eds-text-color--grey-800">What percent of people visit your website from a mobile device?</p>
               </div>
-              <input name='whatPercentMobile' type="text" placeholder="" value="" class="[modifier class]" />
+              <input name='whatPercentMobile' type="number" pattern="[0-9]*" placeholder="" value="" class="[modifier class]" />
               <div class="eds-l-mar-top-1">
                 <aside class="responsive-form__hint eds-text-color--grey-500">50% is common</aside>
               </div>
@@ -291,7 +290,7 @@
             <div class="eds-l-mar-bot-3">
               <p class="eds-text-bl eds-text-color--grey-800">How much does your current system cost to maintain annually? (Consider hosting and software costs)</p>
             </div>
-            <input name='howMuchToMaintainAnnually' type="text" placeholder="" value="" class="[modifier class]" />
+            <input name='howMuchToMaintainAnnually' type="number" placeholder="" value="" class="[modifier class]" />
             <div class="eds-l-mar-top-1">
               <aside class="responsive-form__hint eds-text-color--grey-500">$1000+ is common</aside>
             </div>
@@ -300,7 +299,7 @@
             <div class="eds-l-mar-bot-3">
               <p class="eds-text-bl eds-text-color--grey-800">How many hours a week do employees spend on manual tasks related to your current ticketing system?</p>
             </div>
-            <input name='hoursEmployeesSpendOnManualTasks' type="text" placeholder="" value="" class="[modifier class]" />
+            <input name='hoursEmployeesSpendOnManualTasks' type="number" pattern="[0-9]*" placeholder="" value="" class="[modifier class]" />
             <div class="eds-l-mar-top-1">
               <aside class="responsive-form__hint eds-text-color--grey-500">3+ is common</aside>
             </div>
@@ -347,7 +346,7 @@
               obj.events_per_year__c = df.howManyPaidEvents;
               obj.Vertical__c = df.typeOfEvent;
               var txt = '';
-              Object.keys(df).forEach((key) => {
+              Object.keys(df).forEach(function(key) {
                 console.log("key:", key, " value:", df[key]);
                 txt = txt.concat(key + ':' + df[key]).concat('\r\n');
               });
@@ -359,6 +358,7 @@
             });
             form.onSuccess(function(values, followUpUrl) {
               location.href = "#6";
+              $("html, body").animate({ scrollTop: 0 }, "fast");
               return false;
             })
           });
