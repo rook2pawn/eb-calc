@@ -436,8 +436,12 @@ body{font-family:Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica N
 .mktg-btn-overlap{position:inherit;z-index:300;margin-top:-22px;}
 .mktg-btn-shadow{-webkit-box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);-moz-box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);box-shadow:0px 0px 5px 0px rgba(63,16,1,0.25);}
 @media screen and (max-width: 480px){
-.mktg-landing-hero{background-image:url(/img/roi-header-1-mobile.png);background-image:url(/img/roi-header-1-mobile.svg),
-    linear-gradient(transparent, transparent);}
+  .sectionPanel {
+    margin-top:-133px !important;
+  }
+.mktg-landing-hero.section1{
+  background-image:url(/img/roi-header-1-mobile.png) !important;
+  linear-gradient(transparent, transparent);}
 }
 section.sectionPanel{display:none;}
 section#section1{display:block;}

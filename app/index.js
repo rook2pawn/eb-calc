@@ -140,7 +140,12 @@ $(window).ready(() => {
       activePanel = 1;
     }
     lib.showActivePanel(activePanel,panels);
-    $("html, body").animate({ scrollTop: 250 }, "slow");
+    var isMobile = window.matchMedia("only screen and (max-width: 760px)");
+    if (!isMobile.matches) {
+      $("html, body").animate({ scrollTop: 250 }, "slow");
+    } else {
+      $("html, body").animate({ scrollTop: 0 }, "slow");
+    }
 
   });
   window.onpopstate = function(e) {
