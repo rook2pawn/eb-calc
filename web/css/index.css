@@ -66,8 +66,6 @@ input{word-spacing:1px;}
 @-moz-document url-prefix() { 
 	select {
 	    -moz-appearance: none;
-	    text-indent: 0.01px;
-	    text-overflow: '';
 	}
 }
 .responsive-form input[type=text]:focus{outline:0;border:1px solid #0093D7;}
