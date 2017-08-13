@@ -63,11 +63,12 @@ body{font-family:"Benton Sans","Helvetica Neue",Helvetica,Roboto,Arial,sans-seri
 .btn:hover,.btn:focus{cursor:pointer;text-decoration:none;}
 .btn:active{text-decoration:none;}
 input{word-spacing:1px;}
-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    text-indent: 0.01px;
-    text-overflow: '';
+@-moz-document url-prefix() { 
+	select {
+	    -moz-appearance: none;
+	    text-indent: 0.01px;
+	    text-overflow: '';
+	}
 }
 .responsive-form input[type=text]:focus{outline:0;border:1px solid #0093D7;}
 .responsive-form input[type=text]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
