@@ -68,12 +68,6 @@ input{word-spacing:1px;}
 	    -moz-appearance: none;
 	}
 }
-input[type=text] {
-  -webkit-appearance: none;
-}
-input[type=number] {
-  -webkit-appearance: none;
-}
 .responsive-form input[type=text]:focus{outline:0;border:1px solid #0093D7;}
 .responsive-form input[type=text]{background-clip: padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
 .responsive-form input[type=text]:disabled{background-color:#EFF2F5;border-color:#D2D6DF;color:#ADB0B6;cursor:not-allowed;}
@@ -459,7 +453,7 @@ body{font-family:Benton Sans,-apple-system,BlinkMacSystemFont,Roboto,Helvetica N
 }
 section.sectionPanel{display:none;}
 section#section1{display:block;}
-form.responsive-form select{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;position:relative;display:inline-block;vertical-align:middle;border:1px #D2D6DF solid;border-radius:3px;color:#45494E;background-color:#fff;font-size:16px;line-height:16px;height:44px;}
+form.responsive-form select{-webkit-appearance: none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;position:relative;display:inline-block;vertical-align:middle;border:1px #D2D6DF solid;border-radius:3px;color:#45494E;background-color:#fff;font-size:16px;line-height:16px;height:44px;}
 /*! CSS Used from: http://app-sj11.marketo.com/js/forms2/css/forms2.css */
 #mktoStyleLoaded{background-color:#123456;display:none;}
 .mktoForm{text-align:left;}
