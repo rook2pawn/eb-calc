@@ -68,11 +68,17 @@ input{word-spacing:1px;}
 	    -moz-appearance: none;
 	}
 }
+input[type=text] {
+  -webkit-appearance: none;
+}
+input[type=number] {
+  -webkit-appearance: none;
+}
 .responsive-form input[type=text]:focus{outline:0;border:1px solid #0093D7;}
-.responsive-form input[type=text]{-webkit-appearance: none;background-clip: padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
+.responsive-form input[type=text]{background-clip: padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
 .responsive-form input[type=text]:disabled{background-color:#EFF2F5;border-color:#D2D6DF;color:#ADB0B6;cursor:not-allowed;}
 .responsive-form input[type=number]:focus{outline:0;border:1px solid #0093D7;}
-.responsive-form input[type=number]{-webkit-appearance: none;background-clip: padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
+.responsive-form input[type=number]{background-clip: padding-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;border-radius:3px;vertical-align:middle;width:100%;padding:9px 12px;border:1px #D2D6DF solid;background:#fff;color:#45494E;font-size:16px;line-height:24px;font-weight:400;letter-spacing:.5px;}
 .responsive-form input[type=number]:disabled{background-color:#EFF2F5;border-color:#D2D6DF;color:#ADB0B6;cursor:not-allowed;}
 .responsive-form input[type=radio]{vertical-align:middle;}
 .responsive-form label{vertical-align:middle;font-size:15px;color:#282C35;line-height:22px;}
