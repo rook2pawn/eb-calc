@@ -32,8 +32,6 @@ $(window).ready(function() {
     const el = $(id);
     const form = el.find('form.responsive-form');
     formData[id] = qs.parse(form.serialize());
-    alert("BEFORE:" + JSON.stringify(formData[id]));
-//    console.log("formData at id:", id, formData[id]);
     if (activePanel === 2) {
       formData[id]['howManyVisitEventWebsiteYearly'] = formData[id]['howManyVisitEventWebsiteYearly'].replace(/\D/g,"");
     }
@@ -44,10 +42,7 @@ $(window).ready(function() {
     if (activePanel === 4) {
       formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[\D]/g,"");
     }
-    alert("AFTER:" + JSON.stringify(formData[id]));
     var obj = lib.checkFilled(formData[id],activePanel);
-    console.log("validation obj:", obj);
-
     if (obj.error !== null) {
       $(id + " div.error").show();
       if (activePanel == 2) {
