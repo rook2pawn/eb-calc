@@ -31,12 +31,20 @@ $(window).ready(function() {
     const el = $(id);
     const form = el.find('form.responsive-form');
     formData[id] = qs.parse(form.serialize());
+    console.log("BEFORE:", formData[id]);
 
 //    console.log("formData at id:", id, formData[id]);
+    if (activePanel === 2) {
+      formData[id]['howManyVisitEventWebsiteYearly'] = formData[id]['howManyVisitEventWebsiteYearly'].replace(/,/g,"");
+    }
+    if (activePanel === 3) {
+      formData[id]['whatPercentMobile'] = parseInt(formData[id]['whatPercentMobile']);
+    }
 
     if (activePanel === 4) {
       formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[$,]/g,"");
     }
+    console.log("AFTER:", formData[id]);
     var obj = lib.checkFilled(formData[id],activePanel);
     //console.log("validation obj:", obj);
 
