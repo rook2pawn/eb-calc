@@ -31,22 +31,21 @@ $(window).ready(function() {
     const el = $(id);
     const form = el.find('form.responsive-form');
     formData[id] = qs.parse(form.serialize());
-    console.log("BEFORE:", formData[id]);
-
+    alert("BEFORE:" + JSON.stringify(formData[id]));
 //    console.log("formData at id:", id, formData[id]);
     if (activePanel === 2) {
-      formData[id]['howManyVisitEventWebsiteYearly'] = formData[id]['howManyVisitEventWebsiteYearly'].replace(/,/g,"");
+      formData[id]['howManyVisitEventWebsiteYearly'] = formData[id]['howManyVisitEventWebsiteYearly'].replace(/\D/g,"");
     }
     if (activePanel === 3) {
-      formData[id]['whatPercentMobile'] = parseInt(formData[id]['whatPercentMobile']);
+      formData[id]['whatPercentMobile'] = formData[id]['whatPercentMobile'].replace(/[\D]/g,"");
     }
 
     if (activePanel === 4) {
-      formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[$,]/g,"");
+      formData[id]['howMuchToMaintainAnnually'] = formData[id]['howMuchToMaintainAnnually'].replace(/[\D]/g,"");
     }
-    console.log("AFTER:", formData[id]);
+    alert("AFTER:" + JSON.stringify(formData[id]));
     var obj = lib.checkFilled(formData[id],activePanel);
-    //console.log("validation obj:", obj);
+    console.log("validation obj:", obj);
 
     if (obj.error !== null) {
       $(id + " div.error").show();
