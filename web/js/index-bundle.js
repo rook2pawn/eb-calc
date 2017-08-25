@@ -45,14 +45,16 @@ $(window).ready(function() {
     var obj = lib.checkFilled(formData[id],activePanel);
     if (obj.error !== null) {
       $(id + " div.error").show();
+      var isIphone = navigator.userAgent.test(/iPhone/i);
+      var iPhoneOffset = isIphone ? 100 : 0;
       if (activePanel == 2) {
-        $("html, body").animate({ scrollTop: 250 }, "slow");
+        $("html, body").animate({ scrollTop: 250 - iPhoneOffset }, "slow");
       }
       if (activePanel == 3) {
-        $("html, body").animate({ scrollTop: 950 }, "slow");
+        $("html, body").animate({ scrollTop: 950  - iPhoneOffset}, "slow");
       }
       if (activePanel == 4) {
-        $("html, body").animate({ scrollTop: 250 }, "slow");
+        $("html, body").animate({ scrollTop: 250  - iPhoneOffset}, "slow");
       }
       return;
     }
