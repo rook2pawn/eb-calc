@@ -46,15 +46,26 @@ $(window).ready(function() {
     if (obj.error !== null) {
       $(id + " div.error").show();
       var isIphone = navigator.userAgent.test(/iPhone/i);
-      var iPhoneOffset = isIphone ? 100 : 0;
-      if (activePanel == 2) {
-        $("html, body").animate({ scrollTop: 250 - iPhoneOffset }, "slow");
-      }
-      if (activePanel == 3) {
-        $("html, body").animate({ scrollTop: 950  - iPhoneOffset}, "slow");
-      }
-      if (activePanel == 4) {
-        $("html, body").animate({ scrollTop: 250  - iPhoneOffset}, "slow");
+      if (isIphone) {
+        if (activePanel == 2) {
+          $("html, body").animate({ scrollTop: 100 }, "slow");
+        }
+        if (activePanel == 3) {
+          $("html, body").animate({ scrollTop: 700 }, "slow");
+        }
+        if (activePanel == 4) {
+          $("html, body").animate({ scrollTop: 100 }, "slow");
+        }        
+      } else {
+        if (activePanel == 2) {
+          $("html, body").animate({ scrollTop: 250 }, "slow");
+        }
+        if (activePanel == 3) {
+          $("html, body").animate({ scrollTop: 950 }, "slow");
+        }
+        if (activePanel == 4) {
+          $("html, body").animate({ scrollTop: 250 }, "slow");
+        }
       }
       return;
     }
