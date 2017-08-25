@@ -154,11 +154,10 @@ $(window).ready(function() {
 
   });
   window.onpopstate = function(e) {
-    //console.log("location: " + document.location + ", state: " + JSON.stringify(event.state));
-    if (event.state === null) {
+    if (e.state === null) {
       activePanel = lib.getActivePanelFromURL(window.location) || activePanel;
     } else {
-      activePanel = event.state.activePanel;
+      activePanel = e.state.activePanel;
     }
     lib.showActivePanel(activePanel,panels);
   }
