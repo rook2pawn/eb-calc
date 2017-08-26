@@ -46,6 +46,7 @@ $(window).ready(function() {
     if (obj.error !== null) {
       $(id + " div.error").show();
       var isIphone = navigator.userAgent.test(/iPhone/i);
+      alert("isIphone : " + isIphone.toString());
       if (isIphone) {
         if (activePanel == 2) {
           $("html, body").animate({ scrollTop: 100 }, "slow");
