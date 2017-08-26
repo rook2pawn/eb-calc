@@ -49,13 +49,13 @@ $(window).ready(function() {
       alert("isIphone : " + isIphone.toString());
       if (isIphone) {
         if (activePanel == 2) {
-          $("html, body").animate({ scrollTop: 100 }, "slow");
+          $("html, body").animate({ scrollTop: 0 }, "slow");
         }
         if (activePanel == 3) {
-          $("html, body").animate({ scrollTop: 700 }, "slow");
+          $("html, body").animate({ scrollTop: 0 }, "slow");
         }
         if (activePanel == 4) {
-          $("html, body").animate({ scrollTop: 100 }, "slow");
+          $("html, body").animate({ scrollTop: 0 }, "slow");
         }        
       } else {
         if (activePanel == 2) {
