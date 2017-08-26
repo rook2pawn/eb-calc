@@ -51,7 +51,7 @@ $(window).ready(function() {
           $("html, body").animate({ scrollTop: 0 }, "slow");
         }
         if (activePanel == 3) {
-          $("html, body").animate({ scrollTop: 700 }, "slow");
+          $("html, body").animate({ scrollTop: 800 }, "slow");
         }
         if (activePanel == 4) {
           $("html, body").animate({ scrollTop: 0 }, "slow");
