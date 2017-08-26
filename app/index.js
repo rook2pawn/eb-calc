@@ -44,9 +44,8 @@ $(window).ready(function() {
     var obj = lib.checkFilled(formData[id],activePanel);
     if (obj.error !== null) {
       $(id + " div.error").show();
-      var isIphone = navigator.userAgent.test(/iPhone/i);
-      console.log("isIphone:", isIphone);
-      if (isIphone) {
+      var isIphone = navigator.userAgent.match(/iPhone/i);
+      if (isIphone !== null) {
         if (activePanel == 2) {
           $("html, body").animate({ scrollTop: 0 }, "slow");
         }
